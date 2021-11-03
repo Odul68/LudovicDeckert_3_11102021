@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin center-placement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+$color-primary: #9356dc;
+$color-tertiary: #f6f6f6;
+$color-fourth: #99e2d0;
+$gradient: linear-gradient(160deg, rgba(255,121,218,0.9150035014005602) 0%, rgba(147,86,220,0.8449754901960784) 75%);
+
+
+/* Photo animation trial - width problem to fix ?? */ 
+
+@-webkit-keyframes kenburns-top{0%{-webkit-transform:scale(1) translateY(0);transform:scale(1) translateY(0);-webkit-transform-origin:50% 16%;transform-origin:50% 16%}100%{-webkit-transform:scale(1.25) translateY(-15px);transform:scale(1.25) translateY(-15px);-webkit-transform-origin:top;transform-origin:top}}@keyframes kenburns-top{0%{-webkit-transform:scale(1) translateY(0);transform:scale(1) translateY(0);-webkit-transform-origin:50% 16%;transform-origin:50% 16%}100%{-webkit-transform:scale(1.25) translateY(-15px);transform:scale(1.25) translateY(-15px);-webkit-transform-origin:top;transform-origin:top}}
+.kenburns-top {
+	-webkit-animation: kenburns-top 2s ease-out both;
+	        animation: kenburns-top 2s ease-out both;
+}
+
+
+/* Trial menu animation */
+
+
+@-webkit-keyframes flip-in-hor-top {
+    0% {
+      -webkit-transform: rotateX(-80deg);
+              transform: rotateX(-80deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes flip-in-hor-top {
+    0% {
+      -webkit-transform: rotateX(-80deg);
+              transform: rotateX(-80deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .option-one, .option-two, .option-three {
+	-webkit-animation: flip-in-hor-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: flip-in-hor-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+
+
+
+header{
+    @include center-placement;
+    font-family: Shrikhand, cursive;
+    position: relative;
+    a{
+        position: absolute;
+        left: 2rem;
+        font-size: 1.6rem;
+        color: black;
+    }
+}
+
+.image-container{
+    overflow: hidden;
+}
+
+img{
+    height: 34rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu{
+    position: relative;
+    max-width: 1340px;
+    margin: auto;
+    background-color: $color-tertiary;
+    border-radius: 1rem 1rem 0 0;
+    margin-top: -4rem;
+    .menu-header{
+        display: flex;
+        padding: 2rem 3rem;
+        h2{
+            font-size: 2rem;
+            font-family: Shrikhand,cursive;
+            margin: 0.2rem
+        }
+        .card-like{
+            height: 3rem;
+            width: 2rem;
+            margin-left: auto;
+            position: relative;
+        }
+        .far, .fas{
+            margin-left: auto;
+            font-size: 2rem;
+        }
+    }
+    h3{
+        padding-bottom: 0.4rem;
+        border-bottom: 4px solid $color-fourth;
+        width: 2.4rem;
+        margin: 0 0 1rem 0.6rem;
+        font-size: 1.4rem;
+    }
+    .starters, .main, .desserts{ /* AUSSI A CHANGER / TROP SPECIFIQUE = BORDEL*/
+        margin: 0 1rem; 
+        flex-basis: 100%;
+        margin-top: 2rem;
+        .option-one, .option-two, .option-three{  /* CHANGER LA NOMINATION !! */
+            margin-bottom: 1rem;
+            display: flex;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 1rem;
+        }
+        .price{
+            align-self: end;
+            font-weight: 600;
+            margin-left: auto;
+        }
+        .dish-name h4, p{
+            margin: 0 1.2rem 0.4rem 0;
+        }
+        h4{
+            font-size: 1.1rem;
+        }
+    }
+    .button-order{
+        padding: 2rem;
+        text-align: center;
+        button{
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            color: white;
+            border: none;
+            background: $gradient;
+            border-radius: 2rem;
+        }
+    }
+}
+
+/* HEART CHANGE COLOR TO RE ORGANIZE */
+
+.fa-heart{
+    font-weight: 100;
+    transition: color 0.4s ease-out;
+}
+
+.card-like:hover{
+    .fas{
+      font-weight: 900;  
+        color: darkorchid;
+    }
+    .far{
+        color: darkorchid;
+    }
+}    
+
+
+
+
+/* Media Queries mobile */
+
+@media (min-width:1100px){
+    .menu-cards{
+        display: flex;
+    }
+}
+
+
+
+.page-footer{
+    padding: 1rem;
+    background-color: #323232;
+    color: white;
+    .footer-link{
+        text-decoration: none;
+    }
+    h3{
+        font-family: Shrikhand, cursive;
+    }
+    ul{
+        padding: 0;
+    }
+    li{
+        list-style-type: none;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+    i{
+        margin-right: 0.6rem;
+        width: 1rem;
+    }
+    p{
+        margin: 0.3rem 0;
+    }
+}
