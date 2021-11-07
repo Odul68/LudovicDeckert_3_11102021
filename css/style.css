@@ -1,0 +1,369 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* TRIAL NEW-CARD ANIMATION */
+@-webkit-keyframes rotate-scale-down-hor {
+  0% {
+    -webkit-transform: scale(1) rotateX(0);
+    transform: scale(1) rotateX(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateX(-180deg);
+    transform: scale(0.5) rotateX(-180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateX(-360deg);
+    transform: scale(1) rotateX(-360deg);
+  }
+}
+@keyframes rotate-scale-down-hor {
+  0% {
+    -webkit-transform: scale(1) rotateX(0);
+    transform: scale(1) rotateX(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) rotateX(-180deg);
+    transform: scale(0.5) rotateX(-180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateX(-360deg);
+    transform: scale(1) rotateX(-360deg);
+  }
+}
+.loader {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  z-index: 1;
+  animation-name: loader;
+  animation: loader 4s 1 both;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-ellipsis {
+  display: flex;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #9356dc;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+header, h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Shrikhand, cursive;
+  margin: 0.2rem;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebebeb;
+  box-shadow: inset 0 0.2rem 0.3rem #dbdbdb;
+  color: #323232;
+}
+.location i {
+  margin-right: 1rem;
+}
+
+.explore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #f6f6f6;
+}
+.explore h2, .explore p {
+  text-align: center;
+}
+.explore p {
+  color: #323232;
+}
+.explore a {
+  padding: 1rem 1.4rem;
+  border-radius: 25px;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(160deg, rgba(255, 121, 218, 0.9150035014) 0%, rgba(147, 86, 220, 0.8449754902) 75%);
+  box-shadow: 0.1rem 0.1rem 0.4rem #dbdbdb;
+  cursor: pointer;
+  transition: transform 500ms;
+}
+.explore a:hover {
+  transform: scale(1.02);
+  filter: brightness(1.02);
+}
+
+.operation {
+  padding: 2rem 1rem;
+  max-width: 1340px;
+  margin: auto;
+}
+.operation h2 {
+  padding-left: 1rem;
+}
+.operation ol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  counter-reset: listcounter;
+  padding-left: 1rem;
+  flex-direction: column;
+}
+.operation li {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 1rem 0.6rem 2rem;
+  background-color: #f6f6f6;
+  margin: 1rem;
+  border-radius: 1.2rem;
+  width: 100%;
+  justify-content: start;
+  position: relative;
+  box-shadow: 0.2rem 0.2rem 0.8rem #dbdbdb;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.operation .operation-number::before {
+  counter-increment: listcounter 1;
+  content: counter(listcounter) " ";
+  height: 2rem;
+  width: 2rem;
+  background-color: #9356dc;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-right: 1rem;
+  position: absolute;
+  left: -0.75rem;
+}
+.operation .operation-number .fas {
+  margin-right: 1rem;
+  font-size: 1.4rem;
+  color: darkgrey;
+}
+
+/* to replace */
+li:hover {
+  background-color: #ebebeb;
+  transform: scale(1.01);
+}
+
+/* Media Queries Operation */
+@media (min-width: 1100px) {
+  .operation ol {
+    flex-direction: row;
+  }
+  .operation h2 {
+    padding-left: 0;
+  }
+}
+.restaurants {
+  /* add colors at the beginning + other SASS variables*/
+  padding: 2rem 1rem;
+  background-color: #f6f6f6;
+}
+.restaurants h2 {
+  max-width: 1340px;
+  margin: auto;
+  padding: 1rem 1rem 2rem 1rem;
+}
+.restaurants .restaurants-cards {
+  max-width: 1340px;
+  margin: auto;
+}
+.restaurants a {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.8rem #dbdbdb;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  margin: 1rem;
+  /* lien entre margin et flex-basis ? */
+  position: relative;
+  flex-basis: 46%;
+  /* REALLY TO CHECK !!!*/
+  transition: transform 0.4s;
+}
+.restaurants img {
+  height: 16rem;
+  border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
+}
+.restaurants .card-new {
+  position: absolute;
+  right: 1rem;
+  color: #139373;
+  background-color: #9ae3d1;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  -webkit-animation: rotate-scale-down-hor 0.65s linear both;
+  animation: rotate-scale-down-hor 0.65s linear both;
+}
+.restaurants .card-footer {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  color: black;
+}
+.restaurants .card-footer .card-description h3, .restaurants .card-footer p {
+  margin: 0 0 0.3rem 0;
+}
+.restaurants .card-footer .card-like {
+  margin-left: auto;
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+}
+.restaurants .card-footer .card-like .far, .restaurants .card-footer .card-like .fas {
+  font-size: 2rem;
+}
+
+.fa-heart {
+  font-weight: 100;
+  transition: color 0.4s ease-out;
+}
+
+/* Heart filling trial - problem with the box and heart filling */
+.card-like:hover .fas {
+  font-weight: 900;
+  color: darkorchid;
+}
+.card-like:hover .far {
+  color: darkorchid;
+}
+
+a:hover {
+  transform: scale(1.008);
+}
+
+/* Media Queries Restaurants */
+@media (min-width: 1100px) {
+  /* Essai à revoir */
+  .restaurants-cards {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: fit-content;
+    justify-content: space-between;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+.page-footer {
+  padding: 1rem;
+  background-color: #323232;
+  color: white;
+}
+.page-footer .footer-link {
+  text-decoration: none;
+}
+.page-footer h3 {
+  font-family: Shrikhand, cursive;
+}
+.page-footer ul {
+  padding: 0;
+}
+.page-footer li {
+  list-style-type: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.page-footer i {
+  margin-right: 0.6rem;
+  width: 1rem;
+}
+.page-footer p {
+  margin: 0.3rem 0;
+}
+
+/*# sourceMappingURL=style.css.map */

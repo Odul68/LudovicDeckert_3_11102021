@@ -4,7 +4,8 @@
   "description": "Project 3 OC",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css",
+    "build":  "sass ./sass/main.scss:./css/style.css"
   },
   "author": "Ludo",
   "license": "ISC",
