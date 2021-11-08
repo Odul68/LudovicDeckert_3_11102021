@@ -367,7 +367,7 @@ header, h1 {
 }
 
 /* to replace */
-li:hover {
+.operation-number:hover {
   background-color: #ebebeb;
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
@@ -522,19 +522,18 @@ a:hover {
   color: white;
 }
 
+.page-footer li {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .page-footer .footer-link {
   text-decoration: none;
-}
-
-.page-footer h3 {
-  font-family: Shrikhand, cursive;
-}
-
-.page-footer ul {
-  padding: 0;
-}
-
-.page-footer li {
   list-style-type: none;
   color: white;
   display: -webkit-box;
@@ -543,6 +542,14 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.page-footer h3 {
+  font-family: Shrikhand, cursive;
+}
+
+.page-footer ul {
+  padding: 0;
 }
 
 .page-footer i {

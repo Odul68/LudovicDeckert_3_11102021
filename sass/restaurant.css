@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -165,6 +171,8 @@ img {
   background-color: white;
   border-radius: 1rem;
   cursor: pointer;
+  max-height: 5rem;
+  overflow: hidden;
 }
 
 .menu .starters .price, .menu .main .price, .menu .desserts .price {
@@ -217,18 +225,37 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 100px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .menu .option-one:hover .checkbox {
   margin-right: -1rem;
 }
 
+.menu .option-one:hover .checkbox .checkbox-logo {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
 .menu .option-two:hover .checkbox {
   margin-right: -1rem;
 }
 
+.menu .option-two:hover .checkbox .checkbox-logo {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
 .menu .option-three:hover .checkbox {
   margin-right: -1rem;
+}
+
+.menu .option-three:hover .checkbox .checkbox-logo {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .menu .button-order {
@@ -243,6 +270,16 @@ img {
   border: none;
   background: linear-gradient(160deg, rgba(255, 121, 218, 0.915004) 0%, rgba(147, 86, 220, 0.844975) 75%);
   border-radius: 2rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+.menu .button-order button:hover {
+  -webkit-transform: scale(1.008);
+          transform: scale(1.008);
 }
 
 /* HEART CHANGE COLOR TO RE ORGANIZE */
@@ -276,19 +313,18 @@ img {
   color: white;
 }
 
+.page-footer li {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .page-footer .footer-link {
   text-decoration: none;
-}
-
-.page-footer h3 {
-  font-family: Shrikhand, cursive;
-}
-
-.page-footer ul {
-  padding: 0;
-}
-
-.page-footer li {
   list-style-type: none;
   color: white;
   display: -webkit-box;
@@ -297,6 +333,14 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.page-footer h3 {
+  font-family: Shrikhand, cursive;
+}
+
+.page-footer ul {
+  padding: 0;
 }
 
 .page-footer i {

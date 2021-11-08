@@ -58,90 +58,90 @@ $gradient: linear-gradient(160deg, rgba(255,121,218,0.9150035014005602) 0%, rgba
 
 
   .loader{
-      height: 100%;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.5);
-      position: fixed;
-      z-index: 1;
-      animation-name: loader;
-      animation: loader 4s 1 both;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-
-  .lds-ellipsis {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    z-index: 1;
+    animation-name: loader;
+    animation: loader 4s 1 both;
     display: flex;
-    position: relative;
-    width: 80px;
-    height: 80px;
-    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
 
-  }
-  .lds-ellipsis div {
-    position: absolute;
-    top: 33px;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background: $color-primary;
-    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+.lds-ellipsis {
+  display: flex;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: auto;
 
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: $color-primary;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
   }
-  .lds-ellipsis div:nth-child(1) {
-    left: 8px;
-    animation: lds-ellipsis1 0.6s infinite;
+  100% {
+    transform: scale(1);
   }
-  .lds-ellipsis div:nth-child(2) {
-    left: 8px;
-    animation: lds-ellipsis2 0.6s infinite;
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
   }
-  .lds-ellipsis div:nth-child(3) {
-    left: 32px;
-    animation: lds-ellipsis2 0.6s infinite;
+  100% {
+    transform: scale(0);
   }
-  .lds-ellipsis div:nth-child(4) {
-    left: 56px;
-    animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
   }
-  @keyframes lds-ellipsis1 {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
+  100% {
+    transform: translate(24px, 0);
   }
-  @keyframes lds-ellipsis3 {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
-  }
-  @keyframes lds-ellipsis2 {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(24px, 0);
-    }
-  }
+}
 
 
-  @keyframes loader{
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-      opacity: 0;
-      z-index: -1;
-    }
+@keyframes loader{
+  0% {
+      opacity: 1;
   }
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 
 
 
@@ -245,7 +245,7 @@ header, h1{
 
 /* to replace */ 
 
-li:hover{
+.operation-number:hover{
     background-color: $color-secondary;
     transform: scale(1.01);
 }
@@ -334,7 +334,7 @@ li:hover{
 
 /* Heart filling trial - problem with the box and heart filling */
 
-.card-like:hover{
+.card-like:hover, .card-like:active{
     .fas{
       font-weight: 900;  
         color: darkorchid;
@@ -372,20 +372,23 @@ a:hover{
     padding: 1rem;
     background-color: #323232;
     color: white;
+    li{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
     .footer-link{
         text-decoration: none;
+        list-style-type: none;
+        color: white;
+        display: flex;
+        align-items: center;
     }
     h3{
         font-family: Shrikhand, cursive;
     }
     ul{
         padding: 0;
-    }
-    li{
-        list-style-type: none;
-        color: white;
-        display: flex;
-        align-items: center;
     }
     i{
         margin-right: 0.6rem;
