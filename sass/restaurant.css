@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
-  margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -73,7 +72,7 @@ body {
   }
 }
 
-.option-one, .option-two, .option-three {
+.option {
   -webkit-animation: flip-in-hor-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: flip-in-hor-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -153,7 +152,6 @@ img {
 }
 
 .menu .starters, .menu .main, .menu .desserts {
-  /* AUSSI A CHANGER / TROP SPECIFIQUE = BORDEL*/
   margin: 0 1rem;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -161,8 +159,7 @@ img {
   overflow: hidden;
 }
 
-.menu .starters .option-one, .menu .starters .option-two, .menu .starters .option-three, .menu .main .option-one, .menu .main .option-two, .menu .main .option-three, .menu .desserts .option-one, .menu .desserts .option-two, .menu .desserts .option-three {
-  /* CHANGER LA NOMINATION !! */
+.menu .starters .option, .menu .main .option, .menu .desserts .option {
   margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -172,7 +169,6 @@ img {
   border-radius: 1rem;
   cursor: pointer;
   max-height: 5rem;
-  overflow: hidden;
 }
 
 .menu .starters .price, .menu .main .price, .menu .desserts .price {
@@ -183,8 +179,18 @@ img {
   margin-left: auto;
 }
 
-.menu .starters .dish-name h4, .menu .starters p, .menu .main .dish-name h4, .menu .main p, .menu .desserts .dish-name h4, .menu .desserts p {
+.menu .starters .dish-name, .menu .main .dish-name, .menu .desserts .dish-name {
+  padding-right: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu .starters .dish-name h4, .menu .starters .dish-name p, .menu .main .dish-name h4, .menu .main .dish-name p, .menu .desserts .dish-name h4, .menu .desserts .dish-name p {
   margin: 0 1.2rem 0.4rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu .starters h4, .menu .main h4, .menu .desserts h4 {
@@ -231,29 +237,29 @@ img {
           transition-duration: 0.5s;
 }
 
-.menu .option-one:hover .checkbox, .menu .option-one:active .checkbox {
+.menu .option:hover .checkbox, .menu .option:active .checkbox {
   margin-right: -1rem;
 }
 
-.menu .option-one:hover .checkbox .checkbox-logo, .menu .option-one:active .checkbox .checkbox-logo {
+.menu .option:hover .checkbox .checkbox-logo, .menu .option:active .checkbox .checkbox-logo {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
 
-.menu .option-two:hover .checkbox, .menu .option-two:active .checkbox {
+.menu .option:hover .checkbox, .menu .option:active .checkbox {
   margin-right: -1rem;
 }
 
-.menu .option-two:hover .checkbox .checkbox-logo, .menu .option-two:active .checkbox .checkbox-logo {
+.menu .option:hover .checkbox .checkbox-logo, .menu .option:active .checkbox .checkbox-logo {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
 
-.menu .option-three:hover .checkbox, .menu .option-three:active .checkbox {
+.menu .option:hover .checkbox, .menu .option:active .checkbox {
   margin-right: -1rem;
 }
 
-.menu .option-three:hover .checkbox .checkbox-logo, .menu .option-three:active .checkbox .checkbox-logo {
+.menu .option:hover .checkbox .checkbox-logo, .menu .option:active .checkbox .checkbox-logo {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
