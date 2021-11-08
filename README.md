@@ -8,17 +8,19 @@ Ohmyfood! est une jeune startup qui voudrait s'imposer sur le marché de la rest
 
 ### Par ici => https://odul68.github.io/LudovicDeckert_3_11102021/
 
-Technologies
 
-  ● Le développement devra se faire en CSS, sans JavaScript.
 
-  ● Aucun framework ne devra être utilisé, en revanche l’utilisation de SASS serait un plus.
+###Technologies
+
+  &nbsp;● Le développement devra se faire en CSS, sans JavaScript.
+
+  &nbsp;● Aucun framework ne devra être utilisé, en revanche l’utilisation de SASS serait un plus.
 
   ● Aucun code CSS ne devra être appliqué via un attribut style dans une balise HTML4
 
   ● Tout le code doit être versionné sur GitHub et le site devra être accessible sur Github Pages une fois terminé.
 
-Compatibilité
+###Compatibilité
 
 La cible étant les personnes connectées et pressées, le site sera développé en utilisant
 l’approche mobile-first. Pour cette raison, seules des maquettes mobiles seront réalisées.
