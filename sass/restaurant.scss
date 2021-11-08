@@ -228,7 +228,7 @@ img{
     transition: color 0.4s ease-out;
 }
 
-.card-like:hover{
+.card-like:hover, .card-like:active{
     .fas{
       font-weight: 900;  
         color: darkorchid;
