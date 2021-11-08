@@ -24,3 +24,6 @@ leur mise en page est libre.
 ● Les pages devront passer la validation W3C en HTML et CSS sans erreur.
 
 ● Le site doit être parfaitement compatible avec les dernières versions desktop de Chrome et Firefox.
+
+
+Par ici => https://odul68.github.io/LudovicDeckert_3_11102021/
