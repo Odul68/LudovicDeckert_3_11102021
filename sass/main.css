@@ -262,6 +262,7 @@ header, h1 {
 .explore a {
   padding: 1rem 1.4rem;
   border-radius: 25px;
+  text-decoration: none;
   color: white;
   font-weight: 700;
   background: linear-gradient(160deg, rgba(255, 121, 218, 0.915004) 0%, rgba(147, 86, 220, 0.844975) 75%);
@@ -481,12 +482,12 @@ header, h1 {
 }
 
 /* Heart filling trial - problem with the box and heart filling */
-.card-like:hover .fas {
+.card-like:hover .fas, .card-like:active .fas {
   font-weight: 900;
   color: darkorchid;
 }
 
-.card-like:hover .far {
+.card-like:hover .far, .card-like:active .far {
   color: darkorchid;
 }
 

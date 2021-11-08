@@ -231,29 +231,29 @@ img {
           transition-duration: 0.5s;
 }
 
-.menu .option-one:hover .checkbox {
+.menu .option-one:hover .checkbox, .menu .option-one:active .checkbox {
   margin-right: -1rem;
 }
 
-.menu .option-one:hover .checkbox .checkbox-logo {
+.menu .option-one:hover .checkbox .checkbox-logo, .menu .option-one:active .checkbox .checkbox-logo {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
 
-.menu .option-two:hover .checkbox {
+.menu .option-two:hover .checkbox, .menu .option-two:active .checkbox {
   margin-right: -1rem;
 }
 
-.menu .option-two:hover .checkbox .checkbox-logo {
+.menu .option-two:hover .checkbox .checkbox-logo, .menu .option-two:active .checkbox .checkbox-logo {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
 
-.menu .option-three:hover .checkbox {
+.menu .option-three:hover .checkbox, .menu .option-three:active .checkbox {
   margin-right: -1rem;
 }
 
-.menu .option-three:hover .checkbox .checkbox-logo {
+.menu .option-three:hover .checkbox .checkbox-logo, .menu .option-three:active .checkbox .checkbox-logo {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
@@ -289,12 +289,12 @@ img {
   transition: color 0.4s ease-out;
 }
 
-.card-like:hover .fas {
+.card-like:hover .fas, .card-like:active .fas {
   font-weight: 900;
   color: darkorchid;
 }
 
-.card-like:hover .far {
+.card-like:hover .far, .card-like:active .far {
   color: darkorchid;
 }
 
