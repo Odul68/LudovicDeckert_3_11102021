@@ -26,7 +26,7 @@ leur mise en page est libre.
 ● Le site doit être parfaitement compatible avec les dernières versions desktop de Chrome et Firefox.
 
 
-![alt text](https://github.com/Odul68/LudovicDeckert_3_11102021/blob/master/maquettes/Maquette%20P3.jpeg)
+![alt text](https://github.com/Odul68/LudovicDeckert_3_11102021/blob/master/maquettes/Ohmyfood.png)
 
 
 
