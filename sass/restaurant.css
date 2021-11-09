@@ -9,7 +9,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-/* Photo animation trial - width problem to fix ?? */
+/* Photo animation */
 @-webkit-keyframes kenburns-top {
   0% {
     -webkit-transform: scale(1) translateY(0);
@@ -45,7 +45,7 @@ body {
   animation: kenburns-top 2s ease-out both;
 }
 
-/* Trial menu animation */
+/* Menu animation */
 @-webkit-keyframes flip-in-hor-top {
   0% {
     -webkit-transform: rotateX(-80deg);
@@ -265,6 +265,7 @@ img {
 }
 
 .menu .button-order {
+  /* Commander button*/
   padding: 2rem;
   text-align: center;
 }
@@ -288,7 +289,7 @@ img {
           transform: scale(1.008);
 }
 
-/* HEART CHANGE COLOR TO RE ORGANIZE */
+/* HEART CHANGE COLOR */
 .fa-heart {
   font-weight: 100;
   -webkit-transition: color 0.4s ease-out;
@@ -304,7 +305,7 @@ img {
   color: darkorchid;
 }
 
-/* Media Queries mobile */
+/* Media Queries cards */
 @media (min-width: 1100px) {
   .menu-cards {
     display: -webkit-box;

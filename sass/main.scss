@@ -22,7 +22,8 @@ $color-tertiary: #f6f6f6;
 $color-quaterny: #dbdbdb;
 $gradient: linear-gradient(160deg, rgba(255,121,218,0.9150035014005602) 0%, rgba(147,86,220,0.8449754901960784) 75%);
 
-/* TRIAL NEW-CARD ANIMATION */
+
+/* NEW-CARD ANIMATION */
 
 
 @-webkit-keyframes rotate-scale-down-hor {
@@ -54,8 +55,7 @@ $gradient: linear-gradient(160deg, rgba(255,121,218,0.9150035014005602) 0%, rgba
     }
   }
   
-
-
+/* loader animation */
 
   .loader{
     height: 100%;
@@ -128,7 +128,6 @@ $gradient: linear-gradient(160deg, rgba(255,121,218,0.9150035014005602) 0%, rgba
     transform: translate(24px, 0);
   }
 }
-
 
 @keyframes loader{
   0% {
@@ -243,15 +242,10 @@ header, h1{
     }
 }
 
-
-/* to replace */ 
-
 .operation-number:hover{
     background-color: $color-secondary;
     transform: scale(1.01);
 }
-
-
 
 /* Media Queries Operation */
 
@@ -267,7 +261,7 @@ header, h1{
 }
 
 
-.restaurants{ /* add colors at the beginning + other SASS variables*/
+.restaurants{
     padding: 2rem 1rem;
     background-color: $color-tertiary;
     h2{
@@ -333,7 +327,7 @@ header, h1{
     transition: color 0.4s ease-out;
 }
 
-/* Heart filling trial - problem with the box and heart filling */
+/* Heart filling */
 
 .card-like:hover, .card-like:active{
     .fas{
@@ -345,16 +339,13 @@ header, h1{
     }
 }    
 
-
 a:hover{
     transform: scale(1.008);
 }
 
-
-
 /* Media Queries Restaurants */
 
-@media (min-width:1100px){  /* Essai à revoir */
+@media (min-width:1100px){ 
     .restaurants-cards{
         display: flex; 
         flex-wrap: wrap;
@@ -365,9 +356,6 @@ a:hover{
      max-width: 100%;
     }
 }
-
-
-
 
 .page-footer{
     padding: 1rem;

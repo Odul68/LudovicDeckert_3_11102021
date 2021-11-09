@@ -17,12 +17,12 @@ body{
 
 
 $color-primary: #9356dc;
+$color-secondary: #99e2d0;
 $color-tertiary: #f6f6f6;
-$color-fourth: #99e2d0;
 $gradient: linear-gradient(160deg, rgba(255,121,218,0.9150035014005602) 0%, rgba(147,86,220,0.8449754901960784) 75%);
 
 
-/* Photo animation trial - width problem to fix ?? */ 
+/* Photo animation */ 
 
 @-webkit-keyframes kenburns-top{0%{-webkit-transform:scale(1) translateY(0);transform:scale(1) translateY(0);-webkit-transform-origin:50% 16%;transform-origin:50% 16%}100%{-webkit-transform:scale(1.25) translateY(-15px);transform:scale(1.25) translateY(-15px);-webkit-transform-origin:top;transform-origin:top}}@keyframes kenburns-top{0%{-webkit-transform:scale(1) translateY(0);transform:scale(1) translateY(0);-webkit-transform-origin:50% 16%;transform-origin:50% 16%}100%{-webkit-transform:scale(1.25) translateY(-15px);transform:scale(1.25) translateY(-15px);-webkit-transform-origin:top;transform-origin:top}}
 .kenburns-top {
@@ -31,7 +31,7 @@ $gradient: linear-gradient(160deg, rgba(255,121,218,0.9150035014005602) 0%, rgba
 }
 
 
-/* Trial menu animation */
+/* Menu animation */
 
 
 @-webkit-keyframes flip-in-hor-top {
@@ -63,9 +63,6 @@ $gradient: linear-gradient(160deg, rgba(255,121,218,0.9150035014005602) 0%, rgba
 	-webkit-animation: flip-in-hor-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: flip-in-hor-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
-
-
 
 
 header{
@@ -118,7 +115,7 @@ img{
     }
     h3{
         padding-bottom: 0.4rem;
-        border-bottom: 4px solid $color-fourth;
+        border-bottom: 4px solid $color-secondary;
         width: 2.4rem;
         margin: 0 0 1rem 0.6rem;
         font-size: 1.4rem;
@@ -207,9 +204,7 @@ img{
     }
 }
 
-
-
-    .button-order{
+    .button-order{ /* Commander button*/
         padding: 2rem;
         text-align: center;
         button{
@@ -228,7 +223,7 @@ img{
     }
 }
 
-/* HEART CHANGE COLOR TO RE ORGANIZE */
+/* HEART CHANGE COLOR */
 
 .fa-heart{
     font-weight: 100;
@@ -245,18 +240,13 @@ img{
     }
 }    
 
-
-
-
-/* Media Queries mobile */
+/* Media Queries cards */
 
 @media (min-width:1100px){
     .menu-cards{
         display: flex;
     }
 }
-
-
 
 .page-footer{
     padding: 1rem;
