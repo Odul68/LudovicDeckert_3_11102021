@@ -278,15 +278,16 @@ img {
   background: linear-gradient(160deg, rgba(255, 121, 218, 0.915004) 0%, rgba(147, 86, 220, 0.844975) 75%);
   border-radius: 2rem;
   cursor: pointer;
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-shadow: 0.3rem 0.3rem 0.5rem lightgrey;
+          box-shadow: 0.3rem 0.3rem 0.5rem lightgrey;
 }
 
 .menu .button-order button:hover {
-  -webkit-transform: scale(1.008);
-          transform: scale(1.008);
+  opacity: 0.9;
+  -webkit-box-shadow: 0.4rem 0.4rem 0.6rem darkgrey;
+          box-shadow: 0.4rem 0.4rem 0.6rem darkgrey;
 }
 
 /* HEART CHANGE COLOR */

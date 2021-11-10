@@ -215,10 +215,12 @@ img{
             background: $gradient;
             border-radius: 2rem;
             cursor: pointer;
-            transition: transform 0.4s;
+            transition: 0.2s;
+            box-shadow: 0.3rem 0.3rem 0.5rem lightgrey;
         }
         button:hover{
-            transform: scale(1.008);
+            opacity: 0.9;
+            box-shadow: 0.4rem 0.4rem 0.6rem darkgrey;
         }
     }
 }
