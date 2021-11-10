@@ -269,17 +269,16 @@ header, h1 {
   -webkit-box-shadow: 0.1rem 0.1rem 0.4rem #dbdbdb;
           box-shadow: 0.1rem 0.1rem 0.4rem #dbdbdb;
   cursor: pointer;
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-box-shadow: 0.3rem 0.3rem 0.5rem lightgrey;
+          box-shadow: 0.3rem 0.3rem 0.5rem lightgrey;
 }
 
 .explore a:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  -webkit-filter: brightness(1.02);
-          filter: brightness(1.02);
+  opacity: 0.9;
+  -webkit-box-shadow: 0.4rem 0.4rem 0.6rem darkgrey;
+          box-shadow: 0.4rem 0.4rem 0.6rem darkgrey;
 }
 
 .operation {
